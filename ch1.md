@@ -37,4 +37,33 @@ With compression, networks support rich set of applications involving multiple m
 4. Audio
    All audio is generated in _analog_ form. Before the signal can be stored in a computer, it must be converted using an electric circuit called **analog-to-digital converter**, which involves sampling the amplitiude of the speech/audio signal at regular time intervals. Higher sampling : better quality.
 
-Data can either be continuous or block mode. In continuous data, the bit rate of the communications channel that is used must be compatible with the sourcec data that is being generated.
+Data can either be continuous or block mode. In _continuous data_, the bit rate of the communications channel that is used must be compatible with the source data that is being generated. Compressed video data stream is generated at fixed time intervals with variable bit rates.
+
+In _block-mode data_, the source data comprises one or more blocks of data that is/are created in a time-independednt way. _Downloading_ is when time-independent blocks of data are transferred across the network to the destination. The _round-trip delay (RTD)_ is the time interval it takes between the request being made and the contents of the block being output at the destination.
+
+## Data Communications and networking terminology
+
+- _simplex_: data only flows in one direction
+- _half-duplex_: data flows in both-directions but only 1 at a time
+- _duplex_: data flows in both directions at the same time
+- _broadcast_: data output by a single source device is received by all other devices that are connected to the same network.
+- _multicast_ broadcast but only to a specific subset of the devices connected to the netowrk
+
+In the case of half-duplex and duplex, the bit rate associated with each direction can be _symmetric_ or _asymmetric_.
+
+## Network Types
+
+Similar to the types of data stream associated with diffrent media - continuous and block-mode - so there are two types of communications channel associated with the various network types: _circuit mode_ and _packet-mode_. The first is known as a synchronous communications cahannel since it provides a constant bit rate service at a specified rate. The second is known as an asynchronous communications channel since it provides a variable bit rate service, the actual rate being determined by the transfer rate of the packets across the network.
+
+### Circuit - Switched
+
+Comprised of an interconnected set of _switching offices / exchanges_ to which the subscriber terminals/ computers are connected. This type of network is known as a _circuit-switched network_ and, prior to sending any data, the source must first set up a connection through the network.
+
+- Each subsriber terminal/computer has a unique network-wide / address associated with it and, to make a call, the source first enters the number/address of the intended communication partner.
+- The local switching office / exchange sets up a connection through the network to switching office /exchange to which the destination is connected.
+- If the connection is available, a message is returned to the source that it is ready for data transfer.
+- After all the data has been transmitted, the source/destination sends a request for the connection to be cleared.
+
+Messages associated with the setting up and clearing of a connection are known as _signaling messages_.
+
+The _call/connection setup delay_ is the delay while a connection initializes.
