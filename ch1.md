@@ -13,4 +13,7 @@ At work, the PC is connected to either a:
 1.  Local Area Network (LAN)
 2.  Enterprise wide private network
 
-Each enterprise wide private network is composed of 
+Each enterprise wide private network is composed of multiple LANs connected by an inter-site backbone network. The networks utilize the same operational mode and protocols as the Internet itself, so they are known as **intranet**.
+
+*Wireless Networks* and *entertainment networks* both use basic radio to provide an access point to the Internet.
+
