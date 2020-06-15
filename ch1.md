@@ -67,3 +67,12 @@ Comprised of an interconnected set of _switching offices / exchanges_ to which t
 Messages associated with the setting up and clearing of a connection are known as _signaling messages_.
 
 The _call/connection setup delay_ is the delay while a connection initializes.
+
+### Packet-Switched
+
+1. Connection Oriented.
+2. Connectionless
+
+* Each terminal/computer that is connected to the network has a unique network-wide number/address associated with it.
+* Each connection utilizes only a variable portion of the bandwidth of each link and hence the connection is known as a virtual connection or, more usually, a virtual circuit (VC).
+1. The source terminal / computer sends a *call request* control packet to its local PSE which contains, in addition to the address of the source and destination terminal/computer, a short identifier known as a virtual circuit identifier (VCI). 
