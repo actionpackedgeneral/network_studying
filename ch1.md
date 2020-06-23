@@ -110,7 +110,7 @@ The operational parameters associated with a digital communications channel thro
 
 The mean bit error rate (BER) of a digital channel is the probability of a binary bit being corrupted during its transmission across the channel over a defined time interval.
 
-$$P_{B} = 1 - (1 - P)^{N}$$
+P_b = 1 - (1 - P)^N
 
 In practice, most networks - both circuit-switched and packet-switched - provide an **unreliable service** which is also known as a **best-try** or **best-effort**. This means that any blocks containting bit errors will be discarded.
 
