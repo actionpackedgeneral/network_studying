@@ -98,6 +98,20 @@ Types of Networks:
 
 Each packet is a **cell**.
 
-# Network QoS
+## Network QoS
 
-The operational parameters associated with a digital communications channel through a network are known as the **network Quality of Service (QoS) parameters**. 
+The operational parameters associated with a digital communications channel through a network are known as the **network Quality of Service (QoS) parameters**.
+
+### Circuit- Switched network
+
+- bit rate
+- mean bit error rate
+- transmission delay
+
+The mean bit error rate (BER) of a digital channel is the probability of a binary bit being corrupted during its transmission across the channel over a defined time interval.
+
+$$P_{B} = 1 - (1 - P)^{N}$$
+
+In practice, most networks - both circuit-switched and packet-switched - provide an **unreliable service** which is also known as a **best-try** or **best-effort**. This means that any blocks containting bit errors will be discarded.
+
+If only error-free blocks are acceptable, it is necessary for the sending terminal/computer to divide source infomrmation into blocks of defined maximum size and for the destination to detect when a block is missing.
