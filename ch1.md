@@ -73,6 +73,31 @@ The _call/connection setup delay_ is the delay while a connection initializes.
 1. Connection Oriented.
 2. Connectionless
 
-* Each terminal/computer that is connected to the network has a unique network-wide number/address associated with it.
-* Each connection utilizes only a variable portion of the bandwidth of each link and hence the connection is known as a virtual connection or, more usually, a virtual circuit (VC).
-1. The source terminal / computer sends a *call request* control packet to its local PSE which contains, in addition to the address of the source and destination terminal/computer, a short identifier known as a virtual circuit identifier (VCI). 
+- Each terminal/computer that is connected to the network has a unique network-wide number/address associated with it.
+- Each connection utilizes only a variable portion of the bandwidth of each link and hence the connection is known as a virtual connection or, more usually, a virtual circuit (VC).
+
+**Connection-Oriented**
+
+1. The source terminal / computer sends a _call request_ control packet to its local PSE which contains, in addition to the address of the source and destination terminal/computer, a short identifier known as a virtual circuit identifier (VCI).
+2. Each PSE has a table that specifies the outgoing link that should be used to reach each network address.
+3. On receipt of the _call request_ packet, the PSE the destination address within the packet to determine the outgoing link to be used.
+4. The next free VCI is then selected and two entries are made into a routing table. The first specifies the incoming link and the second specifies the outgoing link.
+5. The _call request_ packet is then forwarded at each PSE along the route until the destination terminal / computer is reached.
+
+Collectively, the VCIs that are used on the various links form the virtual circuit and, at the destination, assuming the call is accepted, a _call accepted_ packet is returned to the source of the same route.
+
+In a connectionless netowrk, the establishment of a connection is not required and the two communicating terminals/ computers can communicate and exchange data as and when they wish. In a connectionless network, therefore, the term **router** is normally used rather than packet-switching exchange.
+
+In both network types, each packet is stored in a memory buffer. The service offered by a connectionless network is a **best-effort service**. With this mode of operation, a sequence of packets to be received on a number of incoming links, may need forwarding to the same outoging link.This is known as a **store-and-forward**.
+
+Types of Networks:
+
+- Internet (packet-switched, connectionless)
+- X.25 (packet-switched, connection-oriented)
+- Asynchronous transfer mode (ATM) networks.
+
+Each packet is a **cell**.
+
+# Network QoS
+
+The operational parameters associated with a digital communications channel through a network are known as the **network Quality of Service (QoS) parameters**. 
