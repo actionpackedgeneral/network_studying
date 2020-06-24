@@ -114,4 +114,34 @@ The mean bit error rate (BER) of a digital channel is the probability of a binar
 
 In practice, most networks - both circuit-switched and packet-switched - provide an **unreliable service** which is also known as a **best-try** or **best-effort**. This means that any blocks containting bit errors will be discarded.
 
-If only error-free blocks are acceptable, it is necessary for the sending terminal/computer to divide source infomrmation into blocks of defined maximum size and for the destination to detect when a block is missing.
+If only error-free blocks are acceptable, it is necessary for the sending terminal/computer to divide source infomrmation into blocks of defined maximum size and for the destination to detect when a block is missing. A **reliable service** is wehn the destination requests that the source send another copy of the missing block.
+
+The **transmission delay** associated with a channel is determined not only by the bit rate that is used but also by delays that occur in the terminal / computer network interfaces (known as **codec delays**), plus the propagation delay of digital signals as they pass from source to destination across the network.
+
+### Packet-Switched Network
+ * the maximum packet size
+ * mean packet transfer rate
+ * mean packet error rate
+ * mean packet transfer delay
+ * worst-case jitter
+ * transmission delay
+
+The **mean packet transfer rate** is a measure of the average number of packets that are transferred across the network per second. The **mean packet error rate** is the probability of a received packet containing one or more bit errors. 
+
+## Application QoS
+ * required bit rate or mean packet transfer rate
+ * maximum startup delay
+ * maximum end-to-end delay
+ * maximum delay variation/jitter
+ * maximum round-trip-delay
+
+The **startup delay** defines the amount of delay that elapses between an application making a request to start a session and the confirmation being received from the applicaiton at the destination that it is prepared to accept the request.
+
+To overcome the effect of jitter a technique known as **buffering** is used.
+
+**Packetization delay** is the additional delay incurred at the source as the information bitstream is converted into packets. 
+
+# Digital Communications Basics
+
+In each end system there is a **network interface card(NIC)** that performs related network interface functions. The signal output by the NIC simply varies between two voltage levels (*+V* and *-V*) at a rate determined by the transmission bit rate. 
+
