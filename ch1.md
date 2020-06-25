@@ -119,29 +119,59 @@ If only error-free blocks are acceptable, it is necessary for the sending termin
 The **transmission delay** associated with a channel is determined not only by the bit rate that is used but also by delays that occur in the terminal / computer network interfaces (known as **codec delays**), plus the propagation delay of digital signals as they pass from source to destination across the network.
 
 ### Packet-Switched Network
- * the maximum packet size
- * mean packet transfer rate
- * mean packet error rate
- * mean packet transfer delay
- * worst-case jitter
- * transmission delay
 
-The **mean packet transfer rate** is a measure of the average number of packets that are transferred across the network per second. The **mean packet error rate** is the probability of a received packet containing one or more bit errors. 
+- the maximum packet size
+- mean packet transfer rate
+- mean packet error rate
+- mean packet transfer delay
+- worst-case jitter
+- transmission delay
+
+The **mean packet transfer rate** is a measure of the average number of packets that are transferred across the network per second. The **mean packet error rate** is the probability of a received packet containing one or more bit errors.
 
 ## Application QoS
- * required bit rate or mean packet transfer rate
- * maximum startup delay
- * maximum end-to-end delay
- * maximum delay variation/jitter
- * maximum round-trip-delay
+
+- required bit rate or mean packet transfer rate
+- maximum startup delay
+- maximum end-to-end delay
+- maximum delay variation/jitter
+- maximum round-trip-delay
 
 The **startup delay** defines the amount of delay that elapses between an application making a request to start a session and the confirmation being received from the applicaiton at the destination that it is prepared to accept the request.
 
 To overcome the effect of jitter a technique known as **buffering** is used.
 
-**Packetization delay** is the additional delay incurred at the source as the information bitstream is converted into packets. 
+**Packetization delay** is the additional delay incurred at the source as the information bitstream is converted into packets.
 
 # Digital Communications Basics
 
-In each end system there is a **network interface card(NIC)** that performs related network interface functions. The signal output by the NIC simply varies between two voltage levels (*+V* and *-V*) at a rate determined by the transmission bit rate. 
+In each end system there is a **network interface card(NIC)** that performs related network interface functions. The signal output by the NIC simply varies between two voltage levels (_+V_ and _-V_) at a rate determined by the transmission bit rate knwonw as **baseband transmission**.
 
+Networks that provide a digital interface like LAN and ISDN, baseband transmission is also used over the access lines to the network. We can modulate the **carrier signal** by mixing or multiplying it with the modulator, or **modem** (**modulated transmission**).
+
+When transmitting any type of electrical signal over a transmission line, the signal is **attenuated** (decreased in amplitude) and **distorted** (misshaen) by the transmission medium. All types of transmission medium is an electrical signal known as **noise**.
+
+The level of signal impairment is determined by:
+
+- type of transmission medium
+- length of the transmission medium
+- bandwidth of the medium
+- bit rate of the data being transmitted
+
+The received signal is at its peak amplititude in the centre of each **bit cell period**. When the receiver reads the signal at this moment, it is said to be in **synchronism** with the incoming bitstream. **Character / byte synchonism** and **block/frame synchronism** is not a trivial task.
+
+## Transmission media
+
+Types of transmission
+
+- electrical wire
+- fiberglass
+- electromagnetic waves
+
+### Twisted-pair lines
+
+The proximity of the signal and ground referencce wires means that any interference signal is picked up by both wires, reducing its effect on the difference signal. If multiple twisted pairs are enclosed within the same cable, the twisting of each pair within the ecable reduces crosstalk.
+
+\*\*Unshielded twisted pairs (UTPs) are used extensively in telephone networks and (with special integrated circuits) in many local area networks. With shielded twisted pairs (STPs), a protective screen or shield is used to reduce the effect of interference.
+
+### Coaxial cable
